@@ -41,4 +41,4 @@ Angualar
 
 Needed Languages:
 SWQL SolarWInds
-Python
+Python Go Lang
