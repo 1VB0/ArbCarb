@@ -1,5 +1,11 @@
 # ArbCarb
 # ArbCarb
+
+
+Will post updates as neccessary:
+
+Description of The Creator and its Mission:
+
 Im a IT professional I've worked for companies like ATT, TransCore and MGQ Telecommunications (via Seminole Hard Rock Casino) to name a few.
 Ive gained over 8 years of in field experience in telecommunications and also gained an education from local schools in the Broward County / Miami Dade area.
 Learned a complete education at Florida Career College in Fort Lauderdale and Ive been an IT enthusiast since my youth of 7 years old adding controller cards to my Macro ATX motherboard.
