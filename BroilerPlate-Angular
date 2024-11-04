@@ -1,0 +1,42 @@
+Arb Carb Angular Code:
+
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-price-form',
+  template: `
+    <form [formGroup]="priceForm" (ngSubmit)="onSubmit()">
+      <label for="name">Food Name:</label>
+      <input id="name" formControlName="name">
+      
+      <label for="price">Price:</label>
+      <input id="price" formControlName="price" type="number">
+      
+      <label for="favoritismRank">Favoritism Rank (1-5):</label>
+      <input id="favoritismRank" formControlName="favoritismRank" type="number">
+      
+      <button type="submit" [disabled]="priceForm.invalid">Submit</button>
+    </form>
+  `,
+})
+export class PriceFormComponent {
+  priceForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.priceForm = this.fb.group({
+      name: ['', Validators.required],
+      price: [0, [Validators.required, Validators.min(0)]],
+      favoritismRank: [1, [Validators.required, Validators.min(1), Validators.max(5)]],
+    });
+  }
+
+  onSubmit() {
+    if (this.priceForm.valid) {
+      this.http.post('your_api_endpoint', this.priceForm.value).subscribe(response => {
+        console.log('Data submitted successfully', response);
+      });
+    }
+  }
+}
