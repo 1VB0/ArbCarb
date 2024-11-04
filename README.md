@@ -38,6 +38,7 @@ C#
 SQL
 JS,Html,Css
 Angualar
+Dapper
 
 Needed Languages:
 SWQL SolarWInds
